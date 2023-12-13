@@ -2,7 +2,7 @@
 #include <iomanip>
 #include "Vehicle.h"
 
-Vehicle::Vehicle():price(0),typeofTS(nullptr),ownerName(nullptr),priceoffuel(0),cons_per_km(0)
+Vehicle::Vehicle():price(0),typeofTS(""),ownerName(""),priceoffuel(0),cons_per_km(0)
 {
 }
 
@@ -20,7 +20,7 @@ Vehicle::~Vehicle()
 {
 }
 
-size_t CountHowManyVehiclesUnderN(Vehicle owners[],size_t kol_owners,size_t N)
+size_t CountHowManyVehiclesBelowN(Vehicle owners[],size_t kol_owners,size_t N)
 {
     size_t count=0;
     for (size_t i=0;i<kol_owners;++i)
@@ -81,9 +81,15 @@ int main()
     Vehicle Fourth(700,"ElectricBike","Stepan",150,100);
     Vehicle Fifth(First);
     Fifth.setAllInfo(600,"Bike","Ailon",0,100);
+    Fifth.printAll();
+    std::cout << std::endl;
 
     Vehicle owners[]={First,Second,Third,Fourth,Fifth};
-    std::cout << CountHowManyVehiclesUnderN(owners,5,800) << std::endl;
+    std::cout << "Enter the price threshold:  ";
+    int N_price;
+    std::cin >> N_price;
+    std::cout << std::endl;
+    std::cout << "Vehicle which price below " << N_price << ": "<< CountHowManyVehiclesBelowN(owners,5,N_price) << std::endl;
     findingPercentRatio(owners,5);
     TypesofTSfromOnePerson(owners,5,"Diduk");   
 }

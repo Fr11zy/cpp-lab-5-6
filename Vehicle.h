@@ -18,11 +18,11 @@ class Vehicle
         {
             return price;
         }
-        const char* getTypeofTS()
+        char* getTypeofTS()
         {
             return typeofTS;
         }
-        const char* getOwnerName()
+        char* getOwnerName()
         {
             return ownerName;
         }
