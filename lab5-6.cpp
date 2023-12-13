@@ -68,7 +68,7 @@ void TypesofTSfromOnePerson(Vehicle owners[],size_t kol_owners,char* ownerName)
         if (owners[i].getOwnerName()==ownerName)
         {
             std::cout << "Owner " << ownerName << " has " << owners[i].getTypeofTS() << std::endl;    
-        }
+        }        
     }
 }
 

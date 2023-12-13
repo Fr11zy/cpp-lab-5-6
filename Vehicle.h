@@ -14,23 +14,23 @@ class Vehicle
         Vehicle(const Vehicle &other);
        ~Vehicle();
 
-        long int getPrice()
+        long int getPrice() const
         {
             return price;
         }
-        char* getTypeofTS()
+        char* getTypeofTS() const
         {
             return typeofTS;
         }
-        char* getOwnerName()
+        char* getOwnerName() const
         {
             return ownerName;
         }
-        long int getFuelprice()
+        long int getFuelprice() const
         {
             return priceoffuel;
         }
-        long int getCons_per_km()
+        long int getCons_per_km() const
         {
             return cons_per_km;
         }
@@ -64,28 +64,27 @@ class Vehicle
             this->cons_per_km=Newcons_per_km;
         }
 
-        void printPrice()
+        void printPrice() const
         {
             std::cout << "Price: " << price << std::endl;
         }
-        void printTypeofTS()
+        void printTypeofTS() const
         {
             std::cout << "TypeofTS: " << typeofTS << std::endl;
         }
-        void printOwnerName()
+        void printOwnerName() const
         {
             std::cout << "Owner's Name: " << ownerName << std::endl;
         }
-        void printFuelprice()
+        void printFuelprice() const
         {
             std::cout << "Fuel price: " << priceoffuel << std::endl;
         }
-        void printCons_per_km()
+        void printCons_per_km() const
         {
             std::cout << "Consumption per km: " << cons_per_km << std::endl;
         }
-
-        void printAll()
+        void printAll() const
         {
             std::cout << "Price: " << price << std::endl;
             std::cout << "TypeofTS: " << typeofTS << std::endl;
