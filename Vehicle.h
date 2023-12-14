@@ -3,14 +3,14 @@
 class Vehicle
 {
     long int price;
-    char* typeofTS;
-    char* ownerName;
+    std::string typeofTS;
+    std::string ownerName;
     long int priceoffuel;
     long int cons_per_km;
 
     public:
         Vehicle();
-        Vehicle(long int price,char* typeofTS,char* ownerName,long int priceoffuel,long int cons_per_km);
+        Vehicle(long int price,std::string typeofTS,std::string ownerName,long int priceoffuel,long int cons_per_km);
         Vehicle(const Vehicle &other);
        ~Vehicle();
 
@@ -18,11 +18,11 @@ class Vehicle
         {
             return price;
         }
-        char* getTypeofTS() const
+        std::string getTypeofTS() const
         {
             return typeofTS;
         }
-        char* getOwnerName() const
+        std::string getOwnerName() const
         {
             return ownerName;
         }
@@ -39,11 +39,11 @@ class Vehicle
         {
             this->price=Newprice;
         }
-        void setTypeofTS(char* NewtypeofTS)
+        void setTypeofTS(std::string NewtypeofTS)
         {
             this->typeofTS=NewtypeofTS;
         }
-        void setOwnerName(char* NewownerName)
+        void setOwnerName(std::string NewownerName)
         {
             this->ownerName=NewownerName;
         }
@@ -55,7 +55,7 @@ class Vehicle
         {
             this->cons_per_km=Newcons_per_km;
         }
-        void setAllInfo(long int Newprice,char* NewtypeofTS,char* NewownerName,long int Newpriceoffuel,long int Newcons_per_km)
+        void setAllInfo(long int Newprice,std::string NewtypeofTS,std::string NewownerName,long int Newpriceoffuel,long int Newcons_per_km)
         {
             this->price=Newprice;
             this->typeofTS=NewtypeofTS;
